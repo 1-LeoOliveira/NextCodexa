@@ -1,0 +1,24 @@
+/* Barra fixa exibida no topo de cada modelo de referencia */
+
+.demo-bar{
+  background:linear-gradient(135deg,#2563EB,#7C3AED);
+  color:#fff;font-size:13.5px;padding:10px 0;
+  font-family:'Inter',system-ui,sans-serif;
+  position:relative;z-index:60;
+}
+.demo-bar-in{
+  width:100%;max-width:1140px;margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+.demo-bar b{font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+.demo-bar a{
+  background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+  padding:7px 15px;border-radius:999px;font-weight:600;font-size:12.5px;
+  transition:.2s;color:#fff;text-decoration:none;white-space:nowrap;
+}
+.demo-bar a:hover{background:rgba(255,255,255,.3)}
+
+@media(max-width:620px){
+  .demo-bar{font-size:12.5px}
+  .demo-bar-in{justify-content:center;text-align:center}
+}
