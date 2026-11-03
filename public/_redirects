@@ -1,0 +1,5 @@
+# Cloudflare Pages — fallback de SPA.
+# As rotas /modelos/* existem apenas no React Router, nao como arquivos.
+# Sem esta regra, abrir ou recarregar /modelos/erp devolve 404.
+# O status 200 entrega o index.html mantendo a URL original na barra.
+/*    /index.html   200

@@ -196,6 +196,11 @@ Falta apenas **instalar os scripts** no `index.html`, antes de `</head>`:
 O build (`npm run build`) gera uma pasta `dist/` estática. Em qualquer host, configure o
 **fallback para `index.html`** — sem isso as rotas `/modelos/...` dão 404 ao recarregar a página.
 
+- **Cloudflare Pages**:
+  - Build command: `npm run build` · Build output directory: `dist`
+  - O fallback vem do arquivo [`public/_redirects`](public/_redirects), que o Vite
+    copia para `dist/` no build. **Não apague esse arquivo** — sem ele as rotas
+    `/modelos/*` devolvem 404 quando abertas direto ou recarregadas.
 - **Vercel / Netlify**: detectam Vite automaticamente e já fazem o fallback.
   - Build: `npm run build` · Diretório: `dist`
 - **Hospedagem compartilhada (Apache)**: suba o conteúdo de `dist/` e crie um `.htaccess`:
